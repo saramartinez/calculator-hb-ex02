@@ -26,11 +26,25 @@ def divide(list_of_numbers):
     print quotient
     return quotient
 
-# def square(num1):
-#     return num1 * num1
+def square(list_of_numbers):
+    if len(list_of_numbers) > 1:
+        print "You can only square one number. Use 'pow' for exponential computations."
+        return
+    else:
+        for num in list_of_numbers:
+            square = int(num) * int(num)
+        print square
+        return square
 
-# def cube(num1):
-#     return num1 * num1 * num1
+def cube(list_of_numbers):
+    if len(list_of_numbers) > 1:
+        print "You can only cube one number. Use 'pow' for exponential computations."
+        return
+    else:
+        for num in list_of_numbers:
+            cube = int(num) * int(num) * int(num)
+        print cube
+        return cube
 
 # def power(num1, num2):
 #     return num1 ** num2
@@ -52,10 +66,10 @@ while True:
         multiply(tokens[1:])
     elif tokens[0] == "/":
         divide(tokens[1:])
-#     elif tokens[0] == "square":
-#         square(tokens[1:])
-#     elif tokens[0] == "cube":
-#         cube(tokens[1:])
+    elif tokens[0] == "square":
+        square(tokens[1:])
+    elif tokens[0] == "cube":
+        cube(tokens[1:])
 #     elif tokens[0] == "pow" or "power":
 #         power(tokens[1:])
 #     elif tokens[0] == "mod":
