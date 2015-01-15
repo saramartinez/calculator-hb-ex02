@@ -20,11 +20,15 @@ def multiply(list_of_numbers):
     return multiplication
 
 def divide(list_of_numbers):
-    quotient = float(list_of_numbers[0])
-    for each_num in list_of_numbers[1:]:
-        quotient /= float(each_num)
-    print quotient
-    return quotient
+    if "0" in list_of_numbers:
+        print "You cannot divide by zero."
+        return
+    else:
+        quotient = float(list_of_numbers[0])
+        for each_num in list_of_numbers[1:]:
+            quotient /= float(each_num)
+        print quotient
+        return quotient
 
 def square(list_of_numbers):
     if len(list_of_numbers) > 1:
