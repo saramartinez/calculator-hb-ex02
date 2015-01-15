@@ -19,14 +19,12 @@ def multiply(list_of_numbers):
     print multiplication
     return multiplication
 
-# def divide(list_of_numbers):
-#     for each_num in list_of_numbers:
-#         quotient /= float(each_num)
-#     print quotient
-#     return quotient
-
-# TODO: note below is pseudo code for a possible implementation of def divide
-# list_of_numbers[1] / list_of_numbers[2]
+def divide(list_of_numbers):
+    quotient = float(list_of_numbers[0])
+    for each_num in list_of_numbers[1:]:
+        quotient /= float(each_num)
+    print quotient
+    return quotient
 
 # def square(num1):
 #     return num1 * num1
@@ -52,8 +50,8 @@ while True:
         subtract(tokens[1:])
     elif tokens[0] == "*":
         multiply(tokens[1:])
-    # elif tokens[0] == "/":
-    #     divide(tokens[1:])
+    elif tokens[0] == "/":
+        divide(tokens[1:])
 #     elif tokens[0] == "square":
 #         square(tokens[1:])
 #     elif tokens[0] == "cube":
