@@ -46,8 +46,20 @@ def cube(list_of_numbers):
         print cube
         return cube
 
-# def power(num1, num2):
-#     return num1 ** num2
+def power(list_of_numbers):
+    if len(list_of_numbers) < 2:
+        print "You need at least two numbers for exponential computations. Use 'square' or 'cube' for those functions."
+        return
+    if len(list_of_numbers) == 2:
+        exponent = int(list_of_numbers[0]) ** int(list_of_numbers[1])
+        print exponent
+        return exponent
+    else:
+        exponent = int(list_of_numbers[0])
+        for each_num in list_of_numbers[:-1]:
+            exponent **= int(each_num)
+        print exponent
+        return exponent
 
 # def mod(num1, num2):
 #     return num1 % num2
@@ -70,8 +82,8 @@ while True:
         square(tokens[1:])
     elif tokens[0] == "cube":
         cube(tokens[1:])
-#     elif tokens[0] == "pow" or "power":
-#         power(tokens[1:])
+    elif tokens[0] == "pow" or "power":
+        power(tokens[1:])
 #     elif tokens[0] == "mod":
 #         mod(tokens[1:])
     else:
